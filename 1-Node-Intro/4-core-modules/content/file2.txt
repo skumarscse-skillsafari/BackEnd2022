@@ -1,0 +1,1 @@
+Promise-based operations return a promise that is fulfilled when the asynchronous operation is complete.

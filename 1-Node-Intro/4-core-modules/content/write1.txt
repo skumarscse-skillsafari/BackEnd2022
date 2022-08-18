@@ -1,0 +1,1 @@
+The content of file1.txt and file2.txt is: All file system operations have synchronous, callback, and promise-based forms, and are accessible using both CommonJS syntax and ES6 Modules (ESM)., Promise-based operations return a promise that is fulfilled when the asynchronous operation is complete.
