@@ -4,6 +4,7 @@ const http = require("http");
 // Server
 // Port
 // Req and Res
+// Routes => url in front-end
 
 // console.log(http);
 const server = http.createServer((req, res) => {
@@ -22,6 +23,7 @@ const server = http.createServer((req, res) => {
   // console.log(req);
   // console.log(res);
   if (req.url === "/") {
+    // "/" => home url => http://localhost:5000
     res.end(`
         <h1>Welcome to my page.</h1>
         <p>This is my home page.</p>

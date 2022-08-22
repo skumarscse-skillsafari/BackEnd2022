@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Class Demo" />
+    <title>JavaScript - Class Demo</title>
+    <script>
+      // JavaScript - Class
+      // OOPS
+      // Class
+      // Syntax
+      /*
+        // Declaring a class
+        class ClassName {
+            // properties
+            // methods
+        }
+
+        // Create object
+        let obj = new ClassName()
+        obj.properties;
+        obj.methods;
+        */
+      // Simple Class
+      //   class User {
+      //     userDetails() {
+      //       return {
+      //         firstName: "John",
+      //         lastName: "Jack",
+      //         age: 30,
+      //       };
+      //     }
+      //   }
+      //   let obj = new User();
+      //   console.log(obj.userDetails());
+
+      // Class with arguments
+      class User {
+        constructor(firstName, lastName, age, isAdmin) {
+          /* let this = {
+                firstName: "John",
+                lastName: "Jack",
+                age: 30,
+                isAdmin: true
+            } */
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.age = age;
+          this.isAdmin = isAdmin;
+        }
+        displayName() {
+          console.log(`FullName: ${this.firstName}, ${this.lastName}`);
+        }
+        displayAgeIsAdmin() {
+          return {
+            age: this.age,
+            isAdmin: this.isAdmin,
+          };
+        }
+      }
+      let obj = new User("John", "Jack", 30, true);
+      obj.displayName();
+      console.log(obj.displayAgeIsAdmin());
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Class Demo</h2>
+  </body>
+</html>
