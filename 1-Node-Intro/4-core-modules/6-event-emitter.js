@@ -1,7 +1,7 @@
 // EventEmitter is a class
 const EventEmitter = require("events");
 
-let emitter = new EventEmitter();
+let emitter = new EventEmitter(); // Creating instance or Object
 
 // on and emit
 // on() => create an event
