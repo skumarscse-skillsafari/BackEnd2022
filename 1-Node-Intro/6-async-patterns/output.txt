@@ -1,0 +1,1 @@
+The content of file1.txt and file2.txt is: I am from file1.txt, I am from file2.txt
