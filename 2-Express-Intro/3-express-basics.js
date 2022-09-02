@@ -3,18 +3,23 @@ const express = require("express");
 const app = express();
 const port = 5000;
 
+// Routes
+// "/" => http://localhost:5000/
 app.get("/", (req, res) => {
   res.status(200).send("<h1>Welcome to Express!!!</h1>");
 });
 
+// http://localhost:5000/about
 app.get("/about", (req, res) => {
   res.status(200).send("<h1>This is About Page</h1>");
 });
 
+// http://localhost:5000/skills
 app.get("/skills", (req, res) => {
   res.status(200).send("<h1>This is Skills Page</h1>");
 });
 
+// http://localhost:5000/contact
 app.get("/contact", (req, res) => {
   res.status(200).send("<h1>This is Contact Page</h1>");
 });
