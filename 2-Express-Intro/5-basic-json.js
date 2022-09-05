@@ -24,6 +24,53 @@ app.get("/api/users", (req, res) => {
 // res.sendFile() => file as response
 // res.json() => json data as response
 
+// params and query
+// params
+app.get("/api/users/:userID", (req, res) => {
+  // console.log(req.params); // { userID: '1' }
+  const { userID } = req.params;
+  const singleUser = users.find((user) => user.id === Number(userID));
+  // console.log(singleUser);
+  if (!singleUser) {
+    res.status(200).json({
+      sucess: true,
+      data: [],
+      msg: `User with given ID: ${userID}  does not exists`,
+    });
+  }
+  res.status(200).json(singleUser);
+});
+
+// Multiple params property name
+app.get("/api/user/:userID/product/:productID", (req, res) => {
+  console.log(req.params); // { userID: '20', productID: '12' }
+});
+
+// query
+app.get("/api/v1/user", (req, res) => {
+  // name and limit
+  // console.log(req.query); // {} { name: 'john', limit: '4' }
+  const { name, limit } = req.query;
+  // console.log(name, limit);
+  let tempUsers = [...users];
+  if (name) {
+    tempUsers = tempUsers.filter((user) => {
+      return user.name.startsWith(name);
+    });
+  }
+
+  if (limit) {
+    tempUsers = tempUsers.slice(0, Number(limit));
+  }
+
+  if (tempUsers.length < 1) {
+    return res
+      .status(200)
+      .json({ success: true, data: [], msg: "No matches found" });
+  }
+  return res.status(200).json(tempUsers);
+});
+
 app.listen(5000, () => {
   console.log("Server is running in http://localhost:5000");
 });

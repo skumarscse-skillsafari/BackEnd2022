@@ -93,7 +93,7 @@ const users = [
   },
   {
     id: 5,
-    name: "Chelsey Dietrich",
+    name: "Patricia Lebsack",
     username: "Kamren",
     email: "Lucio_Hettinger@annie.ca",
     address: {
@@ -139,7 +139,7 @@ const users = [
   },
   {
     id: 7,
-    name: "Kurtis Weissnat",
+    name: "Patricia Lebsack",
     username: "Elwyn.Skiles",
     email: "Telly.Hoeger@billy.biz",
     address: {
@@ -185,7 +185,7 @@ const users = [
   },
   {
     id: 9,
-    name: "Glenna Reichert",
+    name: "Patricia Lebsack",
     username: "Delphine",
     email: "Chaim_McDermott@dana.io",
     address: {
