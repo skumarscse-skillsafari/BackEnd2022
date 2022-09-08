@@ -1,6 +1,6 @@
 const userMiddleware = (req, res, next) => {
-  const urlArray = req.url.split("/");
-  const username = urlArray[urlArray.length - 1];
+  // console.log(req.query);
+  const { username } = req.query;
   if (username === "skillsafari") {
     next();
   } else {

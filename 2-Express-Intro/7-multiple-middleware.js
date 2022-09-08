@@ -27,6 +27,8 @@ const middlewareTwo = (req, res, next) => {
 
 // app.use([middleware-1, middleware-2, ..., middleware-N])
 app.use([middlewareOne, middlewareTwo]);
+// app.use("path", middlewareFun)
+app.use("/skills", middlewareOne);
 
 app.get("/", (req, res) => {
   res.send("<h1>Adding multiple middlewares...</h1>");
@@ -36,7 +38,7 @@ app.get("/about", (req, res) => {
   res.send("<h1>This is About Page...</h1>");
 });
 
-app.get("/skills", middlewareOne, (req, res) => {
+app.get("/skills", (req, res) => {
   res.send("<h1>This is Skills Page...</h1>");
 });
 
